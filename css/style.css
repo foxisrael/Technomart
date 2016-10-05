@@ -121,45 +121,58 @@ header {}
     border: none;
 }
 
-.bookmarks, .busket {
+.bookmarks {
     display: block;
     position: relative;
     float: left;
     font-size: 17px;
     line-height: 18px;
-    padding: 14px 0 16px 0;
+    padding: 14px 20px 16px 0px;
+    text-align: center;
     height: 12px;
     color: #fff;
-    margin-right: 75px;
 }
 
 .busket {
-    margin-right: 31px;
+    display: block;
+    position: relative;
+    float: right;
+    width: 75px;
+    font-size: 17px;
+    line-height: 18px;
+    padding: 14px 25px 16px 50px;
+    text-align: center;
+    height: 12px;
+    color: #fff;
+}
+
+.busket-active{
+  background: #ee3643;
+  float: right;
 }
 
 .checkout {
     display: block;
-    float: left;
+    float: right;
+    width: 113px;
+    height: 12px;
     font-size: 17px;
     line-height: 18px;
     background: #63a63e;
-    padding: 14px 0 16px 0;
+    padding: 14px 20px 16px 20px;
     text-align: center;
-    width: 150px;
-    height: 12px;
     color: white;
     position: relative;
 }
 
-.checkout:hover{
-  background: #5fbb2d;
+.checkout:hover {
+    background: #5fbb2d;
 }
 
-.checkout:active{
-  background: #518534;
-  color: rgba(255, 255, 255, 0.5);;
+.checkout:active {
+    background: #518534;
+    color: rgba(255, 255, 255, 0.5);
 }
-
 
 .bookmarks::before {
     display: block;
@@ -177,7 +190,7 @@ header {}
     display: block;
     content: "";
     top: 13px;
-    left: -30px;
+    left: 20px;
     position: absolute;
     background-image: url("../img/icon-basket.png");
     width: 17px;
@@ -236,6 +249,82 @@ header {}
     background: #fff;
 }
 
+.login-button-user{
+  display: block;
+  width: 300px;
+  float: right;
+  margin-right: 15px;
+}
+
+.login-button-user a{
+  display: inline-block;
+  position: relative;
+  font-family: "cuprum";
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+  margin-top: 5px;
+  margin-right: 35px;
+  text-decoration: underline;
+}
+
+.orders{
+  position: relative;
+  margin-left: 30px;
+}
+
+.orders:before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 92px;
+  background-image: url("../img/icon-shape.png");
+  background-repeat: no-repeat;
+  width: 4px;
+  height: 5px;
+}
+
+
+.user{
+  display: block;
+  position: relative;
+  float: right;
+  font-family: "cuprum";
+  width: 250px;
+  padding: 10px 0px 10px 50px;
+  margin-bottom: 5px;
+  font-size: 21px;
+  line-height: 18px;
+  color: #000;
+  background: #fff;
+  margin-right: -15px;
+}
+
+.user::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background-image: url("../img/icon-user.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 18px;
+}
+
+.user::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 265px;
+  background-image: url("../img/icon-logout.png");
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 17px;
+}
+
 .login {
     display: block;
     position: relative;
@@ -245,39 +334,36 @@ header {}
     font-size: 21px;
     line-height: 18px;
     background: #fff;
-      color: #000;
+    color: #000;
 }
 
-.login:hover,
-.registration:hover {
+.login:hover, .registration:hover {
     color: #ee3643;
 }
 
-.login:active,
-.registration:active {
+.login:active, .registration:active {
     color: #c5c5c5;
 }
 
-.login::before{
-  display: block;
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 17px;
-  background-image: url("../img/icon-login.png");
-  background-repeat: no-repeat;
-  left: 15px;
-  color: #000;
+.login::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 17px;
+    background-image: url("../img/icon-login.png");
+    background-repeat: no-repeat;
+    left: 15px;
+    color: #000;
 }
 
-.login:hover::before{
-  background-image: url("../img/icon-login-hover.png");
+.login:hover::before {
+    background-image: url("../img/icon-login-hover.png");
 }
 
-.login:active::before{
-  background-image: url("../img/icon-login.png");
+.login:active::before {
+    background-image: url("../img/icon-login.png");
 }
-
 
 .top-menu {
     padding-bottom: 60px;
@@ -306,13 +392,13 @@ header {}
     color: #fff;
 }
 
-.menu a:hover{
-  background: #293449;
+.menu a:hover {
+    background: #293449;
 }
 
-.menu a:active{
-  background: #293449;
-  color: #c5c5c5;
+.menu a:active {
+    background: #293449;
+    color: #c5c5c5;
 }
 
 main {
@@ -369,11 +455,11 @@ main {
     text-transform: uppercase;
 }
 
-.btn:hover{
+.btn:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 
-.btn:active{
+.btn:active {
     background: rgba(0, 0, 0, 0.3);
 }
 
@@ -478,16 +564,12 @@ main {
     text-transform: uppercase;
 }
 
-.btn-slider:hover,
-.btn-popular-items:hover,
-.btn-producers-items:hover{
-  background: #ca2c37;
+.btn-slider:hover, .btn-popular-items:hover, .btn-producers-items:hover {
+    background: #ca2c37;
 }
 
-.btn-slider:active,
-.btn-popular-items:active,
-.btn-producers-items:active{
-  background: #ba2732;
+.btn-slider:active, .btn-popular-items:active, .btn-producers-items:active {
+    background: #ba2732;
 }
 
 .discounts {
@@ -521,6 +603,15 @@ main {
     padding: 30px 45px 30px 30px;
     height: 25px;
     margin-bottom: 20px;
+}
+
+.catalog-punchers h2{
+  background-color: #f2f6f8;
+  position: relative;
+  font-weight: normal;
+  padding: 30px 45px 30px 30px;
+  height: 25px;
+  margin-bottom: 20px;
 }
 
 .populat-items-slct {
@@ -646,28 +737,14 @@ main {
     border: 1px solid #e7e7e7;
 }
 
-.bosch:hover,
-.makiita:hover,
-.dewalt:hover,
-.interskol:hover,
-.hitachi:hover,
-.lg:hover,
-.aeg:hover,
-.metabo:hover{
-   border: 1px solid white;
-   box-shadow: 0 0 25px rgba(0,0,0,0.3);
- }
-
- .bosch:active,
- .makiita:active,
- .dewalt:active,
- .interskol:active,
- .hitachi:active,
- .lg:active,
- .aeg:active,
- .metabo:active{
+.bosch:hover, .makiita:hover, .dewalt:hover, .interskol:hover, .hitachi:hover, .lg:hover, .aeg:hover, .metabo:hover {
     border: 1px solid white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.bosch:active, .makiita:active, .dewalt:active, .interskol:active, .hitachi:active, .lg:active, .aeg:active, .metabo:active {
+    border: 1px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     opacity: 0.3;
 }
 
@@ -990,4 +1067,36 @@ main {
 
 .write-me p:last-child {
     margin-right: 0;
+}
+
+
+/* CATALOG */
+.breadcrumbs{
+  margin-top: -40px;
+  margin-bottom: 25px;
+}
+
+.icon-home{
+  background-image: url("../img/icon-home.png");
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 12px;
+}
+
+.icon-right{
+  background-image: url("../img/icon-right.png");
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 12px;
+}
+
+.bc{
+  display: inline-block;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-family: "cuprum";
+  font-size: 13px;
+  line-height: 18px;
+  color: black;
+  margin-right: 15px;
 }
